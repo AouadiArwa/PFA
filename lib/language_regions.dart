@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class LanguageRegionPage extends StatefulWidget {
+  const LanguageRegionPage({super.key});
+
   @override
   _LanguageRegionPageState createState() => _LanguageRegionPageState();
 }
@@ -18,7 +20,7 @@ class _LanguageRegionPageState extends State<LanguageRegionPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Language & Region'),
+        title: const Text('Language & Region'),
         backgroundColor: Colors.purple,
       ),
       body: Padding(
@@ -26,18 +28,18 @@ class _LanguageRegionPageState extends State<LanguageRegionPage> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            Text(
+            const Text(
               'Account Language',
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
-            SizedBox(height: 16),
+            const SizedBox(height: 16),
             Card(
               elevation: 5,
               child: Padding(
                 padding: const EdgeInsets.all(16.0),
                 child: Row(
                   children: [
-                    Expanded(
+                    const Expanded(
                       child: Text(
                         'Language',
                         style: TextStyle(fontSize: 24),
@@ -64,33 +66,33 @@ class _LanguageRegionPageState extends State<LanguageRegionPage> {
       context: context,
       builder: (BuildContext context) {
         return AlertDialog(
-          title: Text('Select Language'),
+          title: const Text('Select Language'),
           content: SingleChildScrollView(
             child: ListBody(
               children: <Widget>[
                 ListTile(
-                  title: Text('English (US)'),
+                  title: const Text('English (US)'),
                   onTap: () {
                     _changeLanguage('English (US)');
                     Navigator.of(context).pop();
                   },
                 ),
                 ListTile(
-                  title: Text('French'),
+                  title: const Text('French'),
                   onTap: () {
                     _changeLanguage('French');
                     Navigator.of(context).pop();
                   },
                 ),
                 ListTile(
-                  title: Text('Arabic'),
+                  title: const Text('Arabic'),
                   onTap: () {
                     _changeLanguage('Arabic');
                     Navigator.of(context).pop();
                   },
                 ),
                 ListTile(
-                  title: Text('Turkish'),
+                  title: const Text('Turkish'),
                   onTap: () {
                     _changeLanguage('Turkish');
                     Navigator.of(context).pop();

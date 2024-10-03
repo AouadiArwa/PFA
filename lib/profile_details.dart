@@ -2,11 +2,13 @@ import 'package:flutter/material.dart';
 import 'change_username.dart';
 
 class ProfileDetailsPage extends StatelessWidget {
+  const ProfileDetailsPage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Profile Settings'),
+        title: const Text('Profile Settings'),
         backgroundColor: Colors.purple,
       ),
       body: Padding(
@@ -18,13 +20,12 @@ class ProfileDetailsPage extends StatelessWidget {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => ChangeUsernamePage()),
+                  MaterialPageRoute(builder: (context) => const ChangeUsernamePage()),
                 );
               },
               child: _buildSettingsCard('Change User Name'),
             ),
-            SizedBox(height: 16),
-            _buildSettingsCard('Change Password'),
+
           ],
         ),
       ),
@@ -40,7 +41,7 @@ class ProfileDetailsPage extends StatelessWidget {
         child: Center(
           child: Text(
             title,
-            style: TextStyle(fontSize: 24),
+            style: const TextStyle(fontSize: 24),
           ),
         ),
       ),

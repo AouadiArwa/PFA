@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
-import 'language_regions.dart';
 import 'profile_details.dart'; // Import the new file
 
 class AccountSettingsPage extends StatelessWidget {
+  const AccountSettingsPage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Account Settings'),
+        title: const Text('Account Settings'),
         centerTitle: true,
         backgroundColor: Colors.purple,
       ),
@@ -16,23 +17,11 @@ class AccountSettingsPage extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            _buildSettingsCard('Notifications'),
-            SizedBox(height: 16),
             GestureDetector(
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => LanguageRegionPage()),
-                );
-              },
-              child: _buildSettingsCard('Language & Region'),
-            ),
-            SizedBox(height: 16),
-            GestureDetector(
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => ProfileDetailsPage()),
+                  MaterialPageRoute(builder: (context) => const ProfileDetailsPage()),
                 );
               },
               child: _buildSettingsCard('Profile Details'),
@@ -52,7 +41,7 @@ class AccountSettingsPage extends StatelessWidget {
         child: Center(
           child: Text(
             title,
-            style: TextStyle(fontSize: 24),
+            style: const TextStyle(fontSize: 24),
           ),
         ),
       ),
